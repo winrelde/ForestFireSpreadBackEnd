@@ -1,0 +1,43 @@
+POST http://localhost:8086/FZUFire/fireBoundry/POST/startAnalysis?lon=119.3399&lat=27.3454
+GET http://localhost:8086/FZUFire/fireBoundry/GET/analysisData
+POST http://localhost:8086/FZUFire/fireBoundry/INSERT/insertBoundry?lon=119.3399&lat=27.3454
+GET http://localhost:8086/FZUFire/fireBoundry/GET/analysisHistoryBylonlat?lon=119.3399&lat=27.3454
+GET http://localhost:8086/FZUFire/fireBoundry/GET/allAnalysisHistory
+GET http://localhost:8086/FZUFire/doc.html
+
+数据库账户密码root iterator 3306 firedb firedoundry
+
+端口被占用 netstat -nao | findstr 8086
+tasklist | findstr 2704
+taskkill /f /t /im 2704
+
+run.bat{
+@echo off
+start /d "C:\Users\12775\Desktop\FZUFire\test\" javaw -jar fzufire-1.0.jar
+exit
+}
+
+close.bat{
+@echo off
+taskkill -f -t -im javaw.exe
+exit
+}
+
+shell:startup
+
+
+
+POST http://139.196.220.228:8800/FZUFire/fireBoundry/POST/startAnalysis?lon=119.3399&lat=27.3454
+GET http://139.196.220.228:8800/FZUFire/fireBoundry/GET/analysisData
+POST http://139.196.220.228:8800/FZUFire/fireBoundry/INSERT/insertBoundry?lon=119.3399&lat=27.3454
+GET http://139.196.220.228:8800/FZUFire/fireBoundry/GET/analysisHistoryBylonlat?lon=119.3399&lat=27.3454
+GET http://139.196.220.228:8800/FZUFire/fireBoundry/GET/allAnalysisHistory
+GET http://139.196.220.228:8800/FZUFire/doc.html
+
+jobs -l
+kill -9 进程号
+
+
+1.0 没有input文件
+2.0 火点不在矩形范围内
+3.0 模型运行无结果，请点击其他点
