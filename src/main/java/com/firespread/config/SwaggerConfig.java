@@ -26,8 +26,8 @@ public class SwaggerConfig {
         return new ApiInfoBuilder()
                 .title("firespread")
                 .version("v1.0")
-                .description("福州大学物信学院林火蔓延项目接口")
-                .contact(new Contact("DelucaWu", "https://blog.csdn.net/djhpa", "1620584767@qq.com"))
+                .description("林火蔓延项目接口")
+                .contact(new Contact("DelucaWu", "https://blog.csdn.net/djhpa"))
                 .build();
     }
 
